@@ -39,7 +39,7 @@ programa
 	
      funcao contaPoupanca(){
      	inteiro diaAniversarioPoupanca = 5
-     	real correcao=0.0, saldoAtual=0.0, operacao=0.0, c=0.0, d=0.0
+     	real correcao=0.0, saldoAtual=0.0, operacao=0.0
      	cadeia continua , movimento    
 
 		cabecalho()
@@ -79,16 +79,24 @@ programa
 		     	escreva("QUANTO DESEJA DEPOSITAR R$? ")
 		        	leia(operacao)
 		        	saldoAtual += operacao
-		        	escreva("SALDO ATUAL: R$ " + saldoAtual + "\n")
+		        	escreva("SALDO ATUAL: R$ "  ,saldoAtual, "\n")
      	               escreva("=======================================================\n")
 		    
-		     }senao {
-		        escreva("QUANTO DESEJA DEBITAR R$? ")
-		        leia(operacao)
-		        saldoAtual -= operacao
-		        escreva("SALDO ATUAL: R$ " + saldoAtual + "\n")
-     	        escreva("=======================================================\n")
-		     }	      
+		     }senao{
+		     	escreva("QUANTO DESEJA DEBITAR R$? ")
+		        	leia(operacao)
+		     	se(operacao>saldoAtual){
+					escreva ("SALDO INSUFICIENTE! O SEU SALDO ATUAL É R$" , saldoAtual, "\n")
+				
+				
+				}senao{
+			        
+			        saldoAtual -= operacao
+			        escreva("SALDO ATUAL: R$ " + saldoAtual + "\n")
+	     	        escreva("=======================================================\n")
+			     }	      
+		     }
+		     
 		}
      }
      
@@ -228,7 +236,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1679; 
+ * @POSICAO-CURSOR = 2465; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
