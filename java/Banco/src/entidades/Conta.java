@@ -18,11 +18,11 @@ public class Conta {
 		return numero;
 	}
 
-	/*
+	
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	*/
+	
 	
 	public String getNome() {
 		return nome;
@@ -54,7 +54,7 @@ public class Conta {
 		else if(valorDebito > saldo) {
 			System.out.println("Saldo Insuficiente");
 		}
-		this.saldo = saldo + valorDebito;
+	
 	}
 	
 }
