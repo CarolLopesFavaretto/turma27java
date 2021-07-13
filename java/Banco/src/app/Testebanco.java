@@ -6,11 +6,11 @@ public class Testebanco {
 	
 	public static void main(String[] args) {
 		
-		ContaPoupança conta1 = new ContaPoupança (1,"Caroline",5);
-		
-	
+		ContaPoupança conta1 = new ContaPoupança (1,"Caroline",10);
 		
 		System.out.println("Data de aniversario conta é: " +conta1.getDiaAniversarioConta());
+		conta1.correcaoDeSaldo();
+		
 		// efetuando debito;
 		conta1.debito(50);
 		System.out.println("Saldo Atual " +conta1.getSaldo());

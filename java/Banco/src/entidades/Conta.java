@@ -4,7 +4,7 @@ public class Conta {
 	
 	private int numero;
 	private String nome;
-	private double saldo;
+	protected double saldo;
 	
 	
 	public Conta(int numero, String nome) {
@@ -56,5 +56,8 @@ public class Conta {
 		}
 	
 	}
+
+
+	
 	
 }
