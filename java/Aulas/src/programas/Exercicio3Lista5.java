@@ -25,6 +25,12 @@ public class Exercicio3Lista5 {
 		produto.add(produto4);
 		produto.add(produto5);
 		
+		
+		
+		for(String item: produto) {
+			System.out.println("Item " + item);
+		}
+		
 		System.out.println(produto);
 		
 		// removendo item "Apontador" do estoque;
@@ -39,8 +45,11 @@ public class Exercicio3Lista5 {
 		//apresentando toda lista de produtos atualizados;
 		for(int i=0; i<produto.size(); i++) {
 			System.out.println("Produto: " + produto.get(i));
-		}
 		
+		} // ou utilizando o foreach
+		for(String item: produto) {
+			System.out.println("Item " + item);
+		}
 		
 		
 		}
