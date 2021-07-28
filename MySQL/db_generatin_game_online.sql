@@ -65,7 +65,7 @@ select * from tb_personagens where defesa > 1000 and defesa <=2000;
  -- pesquisa de colunas especificas com join
  
  select tb_personagens.nome, 
-tb_personagens.classe_id,
+tb_personagens.classe_id,postagem
 tb_classe.nome,
 tb_classe.disponivel
 from tb_personagens
