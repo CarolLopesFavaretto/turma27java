@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @Entity
 @Table (name = "tb_produto")
 
@@ -34,6 +35,9 @@ public class Produto {
 	@JsonIgnoreProperties ("produto")
 	private Categoria categoria; // o tipo de dado deve ser o mesmo nome da classe que eu quero relacionar
 	
+	@ManyToOne
+	@JsonIgnoreProperties ("produto")
+	private Usuario usuario;
 
 	public long getId() {
 		return id;
@@ -74,6 +78,8 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+	
+	
 	
 	
 }

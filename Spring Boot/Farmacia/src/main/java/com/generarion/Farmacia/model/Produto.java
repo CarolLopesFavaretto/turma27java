@@ -11,7 +11,6 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 import lombok.Data;
 
 @Entity
@@ -47,4 +46,6 @@ public class Produto {
 	@ManyToOne
 	@JsonIgnoreProperties ("produto")
 	private Categoria categoria; // o tipo de dado deve ser o mesmo nome da classe que eu quero relacionar
+	
+	
 }
