@@ -11,5 +11,5 @@ import com.generation.lojaGames.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	
-	public Optional <Usuario> findByUsuario (String usuario); // caso nã encontre o atributo
+	public Optional <Usuario> findByUsuario (String usuario); // optional - caso não encontre o atributo
 }

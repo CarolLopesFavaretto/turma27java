@@ -29,9 +29,11 @@ public class Usuario {
 		private long id;
 		
 		@NotBlank
+		@Size(min = 4, max= 50)
 		private String nome;
 		
 		@NotBlank
+		@Size(min = 4, max= 50)
 		private String usuario;
 		
 		@NotNull

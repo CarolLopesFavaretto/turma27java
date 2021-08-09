@@ -1,7 +1,7 @@
 package com.generation.lojaGames.model;
 
 
-public class UsuarioLogin {
+public class UsuarioLogin { 
 	
 	
 	
