@@ -23,10 +23,10 @@ public class Tema {
 	private long id;
 	
 	@NotNull
-	//@Size (min= 10 , max= 100) pq???
+	@Size (min= 10 , max= 100)
 	private String descricao;
 	
-	@OneToMany (mappedBy = "tema", cascade = CascadeType.REMOVE)
+	@OneToMany (mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties ("tema")
 	private List <Postagem> postagem;
 	
