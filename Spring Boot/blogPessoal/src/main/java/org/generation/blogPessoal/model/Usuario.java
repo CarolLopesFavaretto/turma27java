@@ -1,10 +1,10 @@
 package org.generation.blogPessoal.model;
 
-import java.time.LocalDate;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -35,10 +35,11 @@ public class Usuario {
 	@NotBlank
 	@Size (min = 6)
 	private String senha;
-	
-	@Column(name = "dt_nascimento")
-	@JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDate dataNascimento;
+
+	private String foto;
+
+	private String tipo;
+
 	
 	@OneToMany (mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
@@ -46,12 +47,11 @@ public class Usuario {
 	
 	// Primeiro método Construtor
 
-		public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
+		public Usuario(long id, String nome, String usuario, String senha ) {
 			this.id = id;
 			this.nome = nome;
 			this.usuario = usuario;
 			this.senha = senha;
-			this.dataNascimento = dataNascimento;
 		}
 
 		// Segundo método Construtor
@@ -91,13 +91,6 @@ public class Usuario {
 			this.senha = senha;
 		}
 
-		public LocalDate getDataNascimento() {
-			return this.dataNascimento;
-		}
-
-		public void setDataNascimento(LocalDate dataNascimento) {
-			this.dataNascimento = dataNascimento;
-		}
 
 		public List<Postagem> getPostagem() {
 			return this.postagem;
@@ -106,6 +99,22 @@ public class Usuario {
 		public void setPostagem(List<Postagem> postagem) {
 			this.postagem = postagem;
 		}
-	
+
+		public String getFoto() {
+			return foto;
+		}
+
+		public void setFoto(String foto) {
+			this.foto = foto;
+		}
+
+		public String getTipo() {
+			return tipo;
+		}
+
+		public void setTipo(String tipo) {
+			this.tipo = tipo;
+		}
+
 }
 	
